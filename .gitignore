@@ -1,0 +1,11 @@
+# Local secrets / build artifacts
+secrets.h
+*.local
+.env
+.vscode/
+.arduino/
+build/
+.pio/
+*.elf
+*.bin
+*.hex
