@@ -1,0 +1,10 @@
+SMARTMED / MEDTEXT WIRING QUICK REFERENCE
+
+ESP32 GPIO21 -> OLED SDA + DS3231 SDA
+ESP32 GPIO22 -> OLED SCL + DS3231 SCL
+ESP32 3V3 -> OLED VCC + DS3231 VCC (confirm breakout supports 3.3V)
+ESP32 GND -> OLED GND + DS3231 GND + button ground + driver ground
+ESP32 GPIO27 -> one side of normally-open stop button; other side to GND
+ESP32 GPIO25 -> buzzer driver control input (not buzzer 5V terminal)
+
+For a bare 5V buzzer with NPN driver: +5V to buzzer +; buzzer - to collector; emitter to GND; GPIO25 through 1k resistor to base. Tie 5V supply GND to ESP32 GND. Confirm transistor pinout and buzzer datasheet.
